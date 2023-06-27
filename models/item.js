@@ -8,7 +8,15 @@ const ItemSchema = new Schema(
       type: String,
       required: true,
     },
-    text: {
+    text_ua: {
+      type: String,
+      required: true,
+    },
+    text_en: {
+      type: String,
+      required: true,
+    },
+    text_ru: {
       type: String,
       required: true,
     },

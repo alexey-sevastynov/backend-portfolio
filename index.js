@@ -1,5 +1,4 @@
 const express = require("express");
-const Item = require("./models/item");
 
 const cors = require("cors");
 const {
@@ -24,14 +23,6 @@ app.use(cors());
 app.get("/items", getAll);
 app.get("/items/:id", getOneView);
 app.get("/items/star/:id", getOneStars);
-
-app.get("/test", (req, res) => {
-  res.send("hello world!");
-});
-
-app.post("/post", (req, res) => {
-  res.json({ succeess: true });
-});
 
 app.listen(PORT, (err) => {
   if (err) {
