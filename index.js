@@ -1,4 +1,5 @@
 const express = require("express");
+const Item = require("./models/item");
 
 const cors = require("cors");
 const {
@@ -20,12 +21,26 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/projects", getAll);
+app.get("/projects", async (req, res) => {
+  try {
+    const allProjects = await Item.find();
+
+    res.json(allProjects);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ massage: "failed to find projects" });
+  }
+});
+
 app.get("/projects/:id", getOneView);
 app.get("/projects/star/:id", getOneStars);
 
 app.get("/test", (req, res) => {
   res.send("hello world!");
+});
+
+app.post("/post", (req, res) => {
+  res.json({ succeess: true });
 });
 
 app.listen(PORT, (err) => {
