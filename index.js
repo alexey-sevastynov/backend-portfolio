@@ -21,17 +21,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/items", async (req, res) => {
-  try {
-    const allProjects = await Item.find();
-
-    res.json(allProjects);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ massage: "failed to find projects" });
-  }
-});
-
+app.get("/items", getAll);
 app.get("/items/:id", getOneView);
 app.get("/items/star/:id", getOneStars);
 
