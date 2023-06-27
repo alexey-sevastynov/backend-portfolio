@@ -2,9 +2,9 @@ const Item = require("../models/item");
 
 const getAll = async (req, res) => {
   try {
-    const id = await Item.find();
+    const allProjects = await Item.find();
 
-    res.json(id);
+    res.json(allProjects);
   } catch (error) {
     console.log(error);
     res.status(500).json({ massage: "failed to find projects" });
