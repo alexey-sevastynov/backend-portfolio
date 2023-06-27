@@ -21,7 +21,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/projects", async (req, res) => {
+app.get("/items", async (req, res) => {
   try {
     const allProjects = await Item.find();
 
@@ -32,8 +32,8 @@ app.get("/projects", async (req, res) => {
   }
 });
 
-app.get("/projects/:id", getOneView);
-app.get("/projects/star/:id", getOneStars);
+app.get("/items/:id", getOneView);
+app.get("/items/star/:id", getOneStars);
 
 app.get("/test", (req, res) => {
   res.send("hello world!");
