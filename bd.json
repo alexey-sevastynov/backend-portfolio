@@ -38,5 +38,13 @@
     "text_ru": "Мое портфолио. Проект построен на технологиях: React + TypeScript. Styled Components. Framer Motion. i18Next. Redux Toolkit.",
     "languageProgram": "TypeScript",
     "link": "#"
+  },
+  {
+    "title": "bike-shop",
+    "text_ua": "Спільний командний проект з @DmytroShevchenko888. Інтернет магазин велосипедів. Використаний стек технологій: React vite, TypeScript, SCSS, swiper, react-hook-form, react-router-dom, axios, react-redux-toolkit, redux-toolkit-thunk...",
+    "text_en": "Team project joint with @DmytroShevchenko888. Online bicycle store. Technology stack used: React vite, TypeScript, SCSS, swiper, react-hook-form, react-router-dom, axios, react-redux-toolkit, redux-toolkit-thunk...",
+    "text_ru": "Командный проект совместный с @DmytroSevchenko888. Интернет-магазин велосипедов. Используемый стек технологий: React vite, TypeScript, SCSS, swiper, React-Hook-Form, React-Router-dom, Axios, React-Redux-Toolkit, Redux-Toolkit-Thunk...",
+    "languageProgram": "TypeScript",
+    "link": "https://bike-shop-dnipro.netlify.app/"
   }
 ]
